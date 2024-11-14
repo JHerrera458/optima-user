@@ -1,7 +1,8 @@
 "use client";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
+import React, { useState } from "react";
+import { HiBars3 } from "react-icons/hi2";
 
 const navItems = [
   {
@@ -27,16 +28,34 @@ const navItems = [
 ];
 
 export const Navigation = () => {
+  const [showNav, setShowNav] = useState(false);
   return (
-    <header className="flex items-center gap-2 px-24 py-2 text-white md:px-56 lg:px-72 bg-primaryColor ">
-      <span className="mr-auto text-4xl font-bold">OPTIMA</span>
-      <div className="hidden gap-2 sm:flex">
-        {navItems.map((item) => (
-          <NavItem key={item.path} path={item.path} text={item.text} />
-        ))}
-      </div>
-      <div className="flex sm:hidden">hamburger</div>
-    </header>
+    <>
+      <header className="flex items-center gap-2 px-24 py-2 text-white md:px-56 lg:px-72 bg-primaryColor ">
+        <span className="mr-auto text-4xl font-bold">OPTIMA</span>
+        <div className="hidden gap-2 sm:flex">
+          {navItems.map((item) => (
+            <NavItem key={item.path} path={item.path} text={item.text} />
+          ))}
+        </div>
+        <div className="flex sm:hidden">
+          <HiBars3
+            onClick={() => {
+              setShowNav(!showNav);
+            }}
+            size={30}
+            className="cursor-pointer hover:text-secondaryColor"
+          />
+        </div>
+      </header>
+      {showNav && (
+        <div className="flex justify-center gap-2">
+          {navItems.map((item) => (
+            <NavItem key={item.path} path={item.path} text={item.text} />
+          ))}
+        </div>
+      )}
+    </>
   );
 };
 
