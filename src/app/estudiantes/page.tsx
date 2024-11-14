@@ -1,6 +1,7 @@
 import { CustomSubtitle } from "@/components/CustomSubtitle";
 import { CustomTitle } from "@/components/CustomTitle";
 import Image from "next/image";
+import { HiClipboardDocumentCheck, HiPencil, HiTrash } from "react-icons/hi2";
 
 export default function Estudiantes() {
   return (
@@ -60,7 +61,7 @@ export default function Estudiantes() {
         <Image
           className="rounded-lg"
           src="https://i.imgur.com/FCk0G98.png"
-          alt="Confirmación de creación de estudiante "
+          alt="Icono de subir desde excel"
           width={50}
           height={50}
         />
@@ -68,7 +69,7 @@ export default function Estudiantes() {
         <Image
           className="rounded-lg"
           src="https://i.imgur.com/DpbuhW4.png"
-          alt="Confirmación de creación de estudiante "
+          alt="Ventana de subir información desde excel "
           width={600}
           height={600}
         />
@@ -82,7 +83,7 @@ export default function Estudiantes() {
         <Image
           className="rounded-lg"
           src="https://i.imgur.com/O8Z2Kp3.png"
-          alt="Confirmación de creación de estudiante "
+          alt="Tabla de estudiantes en excel "
           width={600}
           height={600}
         />
@@ -91,7 +92,7 @@ export default function Estudiantes() {
           los encabezados de las columnas. Cada columna hace referencia a un
           dato del estudiante.
         </p>
-        <ul className="list-disc px-8">
+        <ul className="px-8 list-disc">
           <li>ced: Hace referencia a la cédula del estudiante</li>
           <li>name: Hace referencia al nombre completo del estudiante</li>
           <li>email: Hace referencial correo electrónico del estudiante</li>
@@ -120,7 +121,98 @@ export default function Estudiantes() {
           superior de tu pantalla un aviso de confirmación con el nombre del
           estudiante que acabas de crear.
         </p>
-        <p></p>
+      </section>
+
+      <section className="flex flex-col gap-1">
+        <CustomSubtitle text="Visualizar información de estudiantes" />
+        <p>
+          Una vez hayas registrado estudiantes en el sistema, podrás visualizar
+          una tabla que contiene a todos los estudiantes que están registrados
+          en el sistema:
+        </p>
+        <Image
+          className="rounded-lg"
+          src="https://i.imgur.com/cFdlYgu.png"
+          alt="Tabla de estudiantes en Optima "
+          width={600}
+          height={600}
+        />
+        <p>
+          En dicha tabla podremos ver la siguiente información de un estudiante:
+          nombre, correo, carrera, si está asignado a un proyecto, y la cantidad
+          de proyectos a la que ha pertenecido.
+        </p>
+        <p>
+          Al hacer click en el ícono{" "}
+          <HiClipboardDocumentCheck className="mx-1" />
+        </p>
+        <p>verás una tabla como la siguiente:</p>
+        <Image
+          className="rounded-lg"
+          src="https://i.imgur.com/oFz3XGT.png"
+          alt="Lista de proyectos de un estudiante "
+          width={600}
+          height={600}
+        />
+        <p>
+          En esta tabla se encuentran los proyectos que han sido asignados al
+          estudiante, en caso de ser un estudiante que no tiene ningún proyecto,
+          la tabla se mostrará vacía. Los proyectos que aparecen en color negro,
+          son proyectos en los que participó el estudiante, y el proyecto que
+          aparece en color verde, es el proyecto actual del estudiante.
+        </p>
+      </section>
+
+      <section className="flex flex-col gap-1">
+        <CustomSubtitle text="Detalle de un estudiante" />
+        <p>
+          Al hacer click en el ícono <HiPencil />
+        </p>
+        <p>
+          Serás redireccionado a una página que contiene la información del
+          estudiante. En esta página es posible editar la información del
+          estudiante, así como borrar el registro del estudiante.
+        </p>
+        <Image
+          className="rounded-lg"
+          src="https://i.imgur.com/AmRn2Rz.png"
+          alt="Detalle de un estudiante"
+          width={600}
+          height={600}
+        />
+        <CustomSubtitle text="Editar un estudiante" />
+        <p>
+          Para editar cualquier dato del estudiante, es necesario cambiar toda
+          la información que se necesite modificar, y luego dar click en el
+          botón <span className="font-medium">Editar información</span>, al
+          hacer esto, la información modificada, se guardará, y veremos un
+          mensaje de confirmación en la parte superior de la pantalla, deberás
+          poder ver los cambios efectuados en el detalle del estudiante.
+        </p>
+
+        <CustomSubtitle text="Borrar un estudiante" />
+        <p>
+          Al hacer click en el ícono <HiTrash />
+        </p>
+        <p>
+          Veremos un aviso, preguntando si realmente deseas borrar el
+          estudiante, es muy importante tener cuidado, ya que al borrar un
+          estudiante, toda su información se borrará del sistema. Sólo se debe
+          usar esta funcionalidad cuando se desee eliminar permanentemente la
+          información de un estudiante.
+        </p>
+        <Image
+          className="rounded-lg"
+          src="https://i.imgur.com/o5BVu8u.png"
+          alt="Eliminar un estudiante"
+          width={600}
+          height={600}
+        />
+        <p>
+          Al hacer click en Confirmar, veremos un mensaje de confirmación en la
+          parte superior de la pantalla, y serás redirigido a la página
+          principal de estudiantes.
+        </p>
       </section>
     </article>
   );
