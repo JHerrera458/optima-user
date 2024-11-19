@@ -33,12 +33,12 @@ export const Navigation = () => {
     <>
       <header className="flex items-center gap-2 px-24 py-2 text-white md:px-56 lg:px-72 bg-primaryColor ">
         <span className="mr-auto text-4xl font-bold">OPTIMA</span>
-        <div className="hidden gap-2 sm:flex">
+        <div className="hidden gap-2 lg:flex">
           {navItems.map((item) => (
             <NavItem key={item.path} path={item.path} text={item.text} />
           ))}
         </div>
-        <div className="flex sm:hidden">
+        <div className="flex lg:hidden">
           <HiBars3
             onClick={() => {
               setShowNav(!showNav);
