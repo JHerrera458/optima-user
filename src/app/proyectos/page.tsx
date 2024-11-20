@@ -158,8 +158,7 @@ export default function Estudiantes() {
       <section className="flex flex-col gap-1">
         <CustomSubtitle text="Añadir estudiantes y tutores" />
         <iframe
-          width="560"
-          height="315"
+          height={600}
           src="https://www.youtube.com/embed/TXLcsgFOLMg?si=ZIsvpayrpndRTTQ0"
           title="Añadir estudiantes a un proyecto | Tutorial"
           allowFullScreen
