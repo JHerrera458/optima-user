@@ -14,7 +14,7 @@ export default function Estudiantes() {
 
       <section className="flex flex-col gap-1">
         <CustomSubtitle text="Creación de un estudiante" />
-        <p>Este es el proceso para crear un estudiante en la plataforma</p>
+        <p>Este es el proceso para crear un estudiante en la plataforma.</p>
         <iframe
           height={600}
           src="https://www.youtube.com/embed/LIyVZmmF2Tg?si=CjyXb5ZsTntkZ1cu"
