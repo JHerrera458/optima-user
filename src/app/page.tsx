@@ -54,6 +54,20 @@ export default function Home() {
             continua de los procesos de formación.
           </li>
         </ul>
+        <a
+          href="https://optima-front.vercel.app/"
+          target="_blank"
+          className="px-4 py-2 bg-primaryColor w-fit rounded-md text-white font-bold"
+        >
+          Ir a Optima
+        </a>
+        <a
+          href={"/manual_tecnico.pdf"}
+          download
+          className="px-4 py-2 bg-primaryColor w-fit rounded-md text-white font-bold"
+        >
+          Manual técnico
+        </a>
       </section>
     </article>
   );
