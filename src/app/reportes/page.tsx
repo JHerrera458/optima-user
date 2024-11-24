@@ -106,6 +106,13 @@ export default function Reportes() {
           title="Agregar puerta de enlace | Tutorial"
           allowFullScreen
         ></iframe>
+        <CustomSubtitle text="Reportes dentro de Optima" />
+        <iframe
+          height={600}
+          src="https://www.youtube.com/embed/Xps8T5OlJKg?si=e1GbsQALH2IU9Oop"
+          title="Reportes Optima | Tutorial"
+          allowFullScreen
+        ></iframe>
       </section>
     </article>
   );
