@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className="sm:bg-green-100 md:bg-yellow-100 lg:bg-red-100">
+      <body>
         <Navigation />
         <div className="flex px-16 py-2 md:px-48 lg:px-64">
           <main className="py-2">{children}</main>
